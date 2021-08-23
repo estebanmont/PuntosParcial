@@ -29,6 +29,42 @@ namespace Punto3
                 Console.WriteLine("Clave: {0}, Valor: {1}", item.Key, item.Value);
             }
         }
+        
+         private static void llaves(Dictionary<int,string>diccionario)
+        {
+            int pares = 0;
+            int primos = 0;
+            int tres = 0;
+            int cinco = 0;
+            int siete = 0;
+
+            foreach (string value in diccionario.Values)
+            {
+                if(value == "2")
+                {
+                    pares++;
+                }
+                else if(value == "3")
+                {
+                    tres++;
+                }
+                else if (value == "5")
+                {
+                    cinco++;
+                }
+                else if (value == "7")
+                {
+                    siete++;
+                }else {
+                    primos++;
+                }
+            }
+            Console.WriteLine("Pares:" + "" + pares + "\n" 
+                + "Multiplos de tres:" + " " + tres + "\n" 
+                + "Multiplos de cinco:" + " " + cinco + "\n" 
+                + "Multiplos de siete:" + " " + siete + "\n"
+                + "Primos:" + " " + primos);
+        }
 
         private static string opciones(int numero)
         {
